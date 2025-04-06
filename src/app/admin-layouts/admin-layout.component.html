@@ -1,1 +1,23 @@
-<p>admin-layout works!</p>
+<div class="layout-container">
+    <app-header class="header"></app-header>
+  
+    <div class="main-wrapper">
+      <aside class="sidebar" [class.collapsed]="!isSidebarOpen">
+        <button mat-icon-button class="toggle-btn" (click)="toggleSidebar()">
+          <mat-icon>menu</mat-icon>
+        </button>
+  
+        <nav class="menu-items">
+       
+        </nav>
+      </aside>
+  
+      <main class="main-content" [class.expanded]="!isSidebarOpen">
+        <div class="scrollable-content">
+            <router-outlet></router-outlet>
+          </div>        
+        <app-footer></app-footer>
+      </main>
+    </div>
+  </div>
+  

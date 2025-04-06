@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from '../../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) { }
 
   loginForm!: FormGroup;
@@ -33,6 +35,7 @@ export class LoginComponent implements OnInit {
     this.loginService.loginWithQueryParams(username, password).subscribe((response: any) => {
       console.log('response:', response);
       alert(response.message);
+      this.router.navigate(['/layout']);
     });
   }
 }

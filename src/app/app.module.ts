@@ -16,6 +16,9 @@ import { AdminLayoutComponent } from './admin-layouts/admin-layout.component';
 import { HeaderComponent } from './admin-layouts/header/header.component';
 import { FooterComponent } from './admin-layouts/footer/footer.component';
 import { SidebarComponent } from './admin-layouts/sidebar/sidebar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +26,16 @@ import { SidebarComponent } from './admin-layouts/sidebar/sidebar.component';
     AdminLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSidenavModule,
     MatCardModule,
+    MatToolbarModule,
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
