@@ -12,10 +12,18 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { MatIconModule } from '@angular/material/icon';
 import { provideHttpClient } from '@angular/common/http';
+import { AdminLayoutComponent } from './admin-layouts/admin-layout.component';
+import { HeaderComponent } from './admin-layouts/header/header.component';
+import { FooterComponent } from './admin-layouts/footer/footer.component';
+import { SidebarComponent } from './admin-layouts/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminLayoutComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
