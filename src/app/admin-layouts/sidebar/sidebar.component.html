@@ -1,1 +1,15 @@
-<p>sidebar works!</p>
+<aside class="sidebar" [class.collapsed]="!isSidebarOpen">
+    <button mat-icon-button class="toggle-btn" (click)="onToggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div class="menu-scroll">
+
+    <nav class="menu-items">
+        <button mat-button>
+            <mat-icon>dashboard</mat-icon>
+            <span *ngIf="isSidebarOpen">Dashboard</span>
+        </button>
+
+    </nav>
+    </div>
+</aside>
