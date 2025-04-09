@@ -14,7 +14,7 @@ const routes: Routes = [
     loadChildren: () => import('./core/auth/auth.module').then(m => m.AuthModule) 
   }, 
   {
-    path: 'layout',
+    path: 'dashboard',
     component: AdminLayoutComponent,
     children: [
       {

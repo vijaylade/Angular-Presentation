@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  @Input() isSidebarOpen: boolean = true;
+  @Output() toggle = new EventEmitter<void>();
+
+  onToggle() {
+    this.toggle.emit();
+  }
 }

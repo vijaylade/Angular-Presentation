@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.loginService.loginWithQueryParams(username, password).subscribe((response: any) => {
       console.log('response:', response);
       alert(response.message);
-      this.router.navigate(['/layout']);
+      this.router.navigate(['/dashboard']);
     });
   }
 }
