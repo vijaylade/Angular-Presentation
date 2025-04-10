@@ -19,6 +19,7 @@ import { SidebarComponent } from './admin-layouts/sidebar/sidebar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatButtonModule,
     MatIconModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatListModule,
+    
   ],
   providers: [
     provideHttpClient(),
