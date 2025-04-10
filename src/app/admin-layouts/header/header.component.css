@@ -11,4 +11,9 @@
   .spacer {
     flex: 1 1 auto;
   }
+
+  .head {
+    background: linear-gradient(to right, #4099ff, #73b4ff);
+
+  }
   
