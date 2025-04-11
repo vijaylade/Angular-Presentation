@@ -1,54 +1,90 @@
-.login-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100vh;
-    margin-right: 13%;
-  }
-  
-  .login-card {
-    padding: 30px;
-    width: 350px;
-    text-align: center;
-    background-color: aliceblue;
-    border-radius: 25px;
-  }
-  
-  .login-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-  }
-  
-  .full-width {
-    width: 100%;
-    border-radius: 30px;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-  mat-form-field {
-    border-radius: 10px;
-  }
-  
-  .forgot-password {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #007bff;
-    cursor: pointer;
-  }
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
 
-  .gradient-btn {
-    background: linear-gradient(to right, blue 20%, skyblue) !important;
-    color: white !important; 
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
+/* Left image */
+.image-container {
+  flex: 1;
+  background-color: #faf6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-image {
+  width: 3000px;
+  max-width: 800px;
+  height: auto;
+}
+
+/* Right form */
+.form-container {
+  flex: 1;
+  background-color: #faf6f6; /* Changed from #6b4bda to white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333; /* Changed from white to dark text for better contrast */
+  padding: 1px;
+}
+
+.login-box {
+  background: #fcfbfb; /* Changed from semi-transparent white to solid white */
+  border-radius: 16px;
+  padding: 40px;
+  width: 50%;
+  max-width: 400px;
+  color: #333; /* Changed from white to dark text */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+}
+
+.login-box h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333; /* Added color for better visibility */
+}
+
+.login-box p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #666; /* Changed from #ddd to darker gray */
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+.gradient-btn {
+  background: linear-gradient(to right, #0066cc, #00ccff);
+  color: white !important;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+}
+
+.forgot-password {
+  color: #0066cc; /* Changed from white to blue to match button */
+  font-size: 13px;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}

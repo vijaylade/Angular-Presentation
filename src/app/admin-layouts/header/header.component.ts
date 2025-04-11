@@ -7,8 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
+  dropdownOpen = false;
   constructor(private router: Router) {}
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
 
   logout() {
     this.router.navigate(['/auth/login']);

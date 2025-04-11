@@ -1,30 +1,36 @@
-<div class="login-container">
-    <mat-card class="login-card">
-      <mat-card-content>
-        <div class="login-title">
-          <mat-icon fontIcon="lock"></mat-icon> LOGIN
-        </div>
-  
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-          <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Laboratory Username</mat-label>
-            <input matInput type="text" formControlName="username" required>
-          </mat-form-field>
-  
-          <mat-form-field appearance="outline" class="full-width">
-            <mat-label>Password</mat-label>
-            <input matInput type="text" formControlName="password" required>
-          </mat-form-field>
-  
-          <mat-checkbox  name="rememberMe">Remember Me?</mat-checkbox>
-  
-          <div class="loginbtn">
-            <button mat-raised-button class="gradient-btn">LOGIN</button>
-          </div>
-        </form>
-  
-        <div class="forgot-password">Forgot Password?</div>
-      </mat-card-content>
-    </mat-card>
+<div class="login-page">
+  <!-- Left Image Section -->
+  <div class="image-container">
+    <img src="assets/LOGOO.jpeg" alt="Doctor Illustration" class="login-image" />
   </div>
-  
+
+  <!-- Right Login Form -->
+  <div class="form-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <p>Enter your credentials to access the portal</p>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Hospital User Name</mat-label>
+          <input matInput type="text" formControlName="username" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" required />
+        </mat-form-field>
+
+        <mat-checkbox formControlName="rememberMe">Remember Me?</mat-checkbox>
+
+        <button mat-raised-button class="gradient-btn" type="submit">
+          LOGIN
+        </button>
+      </form>
+
+      <footer>
+        <a class="forgot-password" href="#">Forgot Password?</a>
+      </footer>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,25 @@
 <mat-toolbar color="primary">
     <span class="spacer"></span> 
+    <!-- Logo Section -->
+  <!-- <div class="logo">
+    <img src="" alt="Logo" class="logo-img" />
+  </div> -->
 
-    <button mat-icon-button matTooltip="Logout" (click)="logout()">
+    <!-- <button mat-icon-button matTooltip="Logout" (click)="logout()">
         <mat-icon>logout</mat-icon>
-      </button>
+      </button> -->
+
+      <div class="profile-container" (click)="toggleDropdown()">
+        <img src="assets/profile.png" alt="Profile" class="profile-pic" />
+    
+        <div class="dropdown" *ngIf="dropdownOpen">
+          <a class="dropdown-item" routerLink="/profile">
+            <mat-icon>person</mat-icon> <span>Profile</span>
+          </a>
+          <a class="dropdown-item" (click)="logout()">
+            <mat-icon>logout</mat-icon> <span>Log out</span>
+          </a>
+        </div>
+      </div>
 </mat-toolbar>
   
