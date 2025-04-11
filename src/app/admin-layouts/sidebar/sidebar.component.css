@@ -59,3 +59,10 @@
 .sidebar.collapsed .nav-link span {
   display: none;
 }
+
+.nav-link.active {
+  background-color: hsla(255, 78%, 79%, 0.7);
+  color: black; 
+  border-radius: 5px; 
+}
+

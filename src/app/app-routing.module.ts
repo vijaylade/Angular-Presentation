@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './admin-layouts/admin-layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UpsertPatientComponent } from './registration/upsert/upsert-patient.component';
 
 const routes: Routes = [
   { 
@@ -14,12 +15,16 @@ const routes: Routes = [
     loadChildren: () => import('./core/auth/auth.module').then(m => m.AuthModule) 
   }, 
   {
-    path: 'dashboard',
+    path: '',
     component: AdminLayoutComponent,
     children: [
       {
-        path: '',
+        path: 'dashboard',
         component: DashboardComponent 
+      },
+      {
+        path: 'patient-registration',
+        component: UpsertPatientComponent
       }
     ]
   },

@@ -1,0 +1,293 @@
+<mat-horizontal-stepper linear #stepper>
+    <!-- Step 1: Personal Info -->
+    <mat-step [stepControl]="personalInfoForm">
+        <form [formGroup]="personalInfoForm">
+            <ng-template matStepLabel>Personal Info</ng-template>
+
+            <div class="mt-4 custom-form-section">
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100 mat-mdc-text-field-wrapper">
+                            <mat-label>Prefix</mat-label>
+                            <mat-select formControlName="prefix">
+                                <mat-option value="">-Select Title-</mat-option>
+                                <mat-option value="Mr">Mr</mat-option>
+                                <mat-option value="Mrs">Mrs</mat-option>
+                                <mat-option value="Miss">Miss</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="custom-input w-100">
+                            <mat-label>First Name</mat-label>
+                            <input matInput formControlName="first_name">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="custom-input w-100">
+                            <mat-label>Middle Name</mat-label>
+                            <input matInput formControlName="middle_name">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="custom-input w-100">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput formControlName="last_name">
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <!-- Row 2 -->
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Gender</mat-label>
+                            <mat-select formControlName="gender">
+                                <mat-option value="">Select Gender</mat-option>
+                                <mat-option value="Male">Male</mat-option>
+                                <mat-option value="Female">Female</mat-option>
+                                <mat-option value="Other">Other</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Mobile No</mat-label>
+                            <input matInput type="tel" formControlName="mobile">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Email ID</mat-label>
+                            <input matInput type="email" formControlName="email">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Blood Group</mat-label>
+                            <mat-select formControlName="blood_group">
+                                <mat-option value="">Select Blood Group</mat-option>
+                                <!-- <mat-option *ngFor="let group of bloodGroups" [value]="group">{{ group }}</mat-option> -->
+                                <mat-option value="Mr">A+</mat-option>
+                                <mat-option value="Mrs">B+</mat-option>
+                                <mat-option value="Miss">AB</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>DOB</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="dob">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Years</mat-label>
+                            <input matInput type="number" formControlName="ageYears">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Months</mat-label>
+                            <input matInput type="number" formControlName="ageMonths">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Days</mat-label>
+                            <input matInput type="number" formControlName="ageDays">
+                        </mat-form-field>
+                    </div>
+
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Weight (Kg)</mat-label>
+                            <input matInput type="number" formControlName="weight">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-3">
+                        <mat-form-field appearance="outline" class="w-100">
+                            <mat-label>Height (cm)</mat-label>
+                            <input matInput type="number" formControlName="height">
+                        </mat-form-field>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="d-flex justify-content-end mt-3">
+                <button mat-raised-button class="nextbtn" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+
+    <!-- Step 2: Address Info -->
+    <mat-step [stepControl]="addressForm">
+        <form [formGroup]="addressForm">
+            <ng-template matStepLabel>Address Info</ng-template>
+
+            <div class="row mt-3">
+                <div class="col-md-12">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput formControlName="address" rows="2" placeholder="Enter address"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Country</mat-label>
+                        <mat-select formControlName="country">
+                            <mat-option value="India">India</mat-option>
+                            <!-- Add more countries if needed -->
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>State</mat-label>
+                        <mat-select formControlName="state">
+                            <mat-option value="Maharashtra">Maharashtra</mat-option>
+                            <!-- Add more states if needed -->
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>District</mat-label>
+                        <mat-select formControlName="district">
+                            <mat-option value="">Select District</mat-option>
+                            <!-- Populate dynamically -->
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Taluka</mat-label>
+                        <mat-select formControlName="taluka">
+                            <mat-option value="">Select Taluka</mat-option>
+                            <!-- Populate dynamically -->
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Town</mat-label>
+                        <mat-select formControlName="town">
+                            <mat-option value="">Select Town</mat-option>
+                            <!-- Populate dynamically -->
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Area Code</mat-label>
+                        <input matInput formControlName="area_code" placeholder="Enter area code">
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <div class="d-flex justify-content-between mt-3">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-raised-button class="nextbtn" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+
+    <!-- Step 3: Other Info -->
+    <mat-step [stepControl]="otherInfoForm">
+        <form [formGroup]="otherInfoForm">
+            <ng-template matStepLabel>Other Info</ng-template>
+
+            <div class="row mt-3">
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>ID Proof</mat-label>
+                        <mat-select formControlName="idProof">
+                            <mat-option value="">Select ID Proof</mat-option>
+                            <mat-option value="Aadhar">Aadhar</mat-option>
+                            <mat-option value="PAN">PAN</mat-option>
+                            <mat-option value="Passport">Passport</mat-option>
+                            <mat-option value="DrivingLicense">Driving License</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Identification Number</mat-label>
+                        <input matInput formControlName="identificationNumber" placeholder="Enter ID Number">
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Reason of Visit</mat-label>
+                        <mat-select formControlName="visitReason" required>
+                            <mat-option value="">Select Reason of Visit</mat-option>
+                            <mat-option value="Consultation">Consultation</mat-option>
+                            <mat-option value="FollowUp">Follow-up</mat-option>
+                            <mat-option value="Emergency">Emergency</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Vaccine Flag</mat-label>
+                        <mat-select formControlName="vaccineFlag">
+                            <mat-option value="">Select Vaccine Type</mat-option>
+                            <mat-option value="Covishield">Covishield</mat-option>
+                            <mat-option value="Covaxin">Covaxin</mat-option>
+                            <mat-option value="None">None</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-raised-button class="subbtn">Submit</button>
+            </div>
+        </form>
+    </mat-step>
+
+</mat-horizontal-stepper>
