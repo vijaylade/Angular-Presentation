@@ -1,0 +1,13 @@
+.nextbtn {
+  background-color: hsla(255, 61%, 64%, 0.7) !important;
+  color: #fff !important;
+}
+
+.nextbtn:hover {
+  background-color: rgb(144, 118, 221) !important;
+}
+
+.subbtn {
+  background-color: rgb(144, 118, 221) !important;
+}
+
